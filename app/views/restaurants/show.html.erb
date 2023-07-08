@@ -1,0 +1,7 @@
+<h1>Este é o restaurante <%= @restaurant.name %> </h1>
+<p> Localizado em : <%= @restaurant.address %></p>
+<p> Nota: <%= @restaurant.rating %></p>
+
+<%= link_to "Editar",  edit_restaurant_path %>
+<%= link_to "Deletar", restaurant_path(@restaurant), data: {turbo_method: :delete, turbo_confirm: "Tem certeza?"} %>
+<%= link_to "Voltar", restaurants_path %>
